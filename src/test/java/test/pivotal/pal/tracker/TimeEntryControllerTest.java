@@ -2,7 +2,7 @@ package test.pivotal.pal.tracker;
 
 import io.pivotal.pal.tracker.TimeEntry;
 import io.pivotal.pal.tracker.TimeEntryController;
-import io.pivotal.pal.tracker.TimeEntryRepository;
+import io.pivotal.pal.tracker.db.TimeEntryRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.HttpStatus;
@@ -29,7 +29,7 @@ public class TimeEntryControllerTest {
 
     @Test
     public void testCreate() throws Exception {
-        TimeEntry timeEntryToCreate = new TimeEntry(123L, 456L, LocalDate.parse("2017-01-08"), 8);
+        TimeEntry timeEntryToCreate = new TimeEntry(1L, 123L, 456L, LocalDate.parse("2017-01-08"), 8);
         TimeEntry expectedResult = new TimeEntry(1L, 123L, 456L, LocalDate.parse("2017-01-08"), 8);
         doReturn(expectedResult)
             .when(timeEntryRepository)
