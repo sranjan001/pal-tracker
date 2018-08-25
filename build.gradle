@@ -1,5 +1,6 @@
 import org.flywaydb.gradle.task.FlywayMigrateTask
 
+
 plugins {
     id "java"
     id "org.springframework.boot" version "1.5.4.RELEASE"
@@ -17,7 +18,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.springframework.boot:spring-boot-starter-security")
 
-    compile("mysql:mysql-connector-java:6.0.6")
+    testCompile("mysql:mysql-connector-java:6.0.6")
 
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
